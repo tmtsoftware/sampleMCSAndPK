@@ -1,0 +1,70 @@
+[0m[[0m[33mwarn[0m] [0m[0m/home/tmt_tcs_2/tcs/sampleApps/samplemcs/samplemcsDeploy/src/main/scala/com/tmt/tcs/mcs/samplemcsDeploy/MCSMainApp.scala:2:16: Unused import[0m
+[0m[[0m[33mwarn[0m] [0m[0mimport java.io._[0m
+[0m[[0m[33mwarn[0m] [0m[0m               ^[0m
+[0m[[0m[33mwarn[0m] [0m[0m/home/tmt_tcs_2/tcs/sampleApps/samplemcs/samplemcsDeploy/src/main/scala/com/tmt/tcs/mcs/samplemcsDeploy/MCSMainApp.scala:4:19: Unused import[0m
+[0m[[0m[33mwarn[0m] [0m[0mimport java.time.{Instant, LocalDateTime, ZoneId}[0m
+[0m[[0m[33mwarn[0m] [0m[0m                  ^[0m
+[0m[[0m[33mwarn[0m] [0m[0m/home/tmt_tcs_2/tcs/sampleApps/samplemcs/samplemcsDeploy/src/main/scala/com/tmt/tcs/mcs/samplemcsDeploy/MCSMainApp.scala:4:28: Unused import[0m
+[0m[[0m[33mwarn[0m] [0m[0mimport java.time.{Instant, LocalDateTime, ZoneId}[0m
+[0m[[0m[33mwarn[0m] [0m[0m                           ^[0m
+[0m[[0m[33mwarn[0m] [0m[0m/home/tmt_tcs_2/tcs/sampleApps/samplemcs/samplemcsDeploy/src/main/scala/com/tmt/tcs/mcs/samplemcsDeploy/MCSMainApp.scala:4:43: Unused import[0m
+[0m[[0m[33mwarn[0m] [0m[0mimport java.time.{Instant, LocalDateTime, ZoneId}[0m
+[0m[[0m[33mwarn[0m] [0m[0m                                          ^[0m
+[0m[[0m[33mwarn[0m] [0m[0m/home/tmt_tcs_2/tcs/sampleApps/samplemcs/samplemcsDeploy/src/main/scala/com/tmt/tcs/mcs/samplemcsDeploy/MCSMainApp.scala:5:25: Unused import[0m
+[0m[[0m[33mwarn[0m] [0m[0mimport java.time.format.DateTimeFormatter[0m
+[0m[[0m[33mwarn[0m] [0m[0m                        ^[0m
+[0m[[0m[33mwarn[0m] [0m[0m/home/tmt_tcs_2/tcs/sampleApps/samplemcs/samplemcsDeploy/src/main/scala/com/tmt/tcs/mcs/samplemcsDeploy/MCSMainApp.scala:6:18: Unused import[0m
+[0m[[0m[33mwarn[0m] [0m[0mimport java.time.Duration[0m
+[0m[[0m[33mwarn[0m] [0m[0m                 ^[0m
+[0m[[0m[33mwarn[0m] [0m[0m/home/tmt_tcs_2/tcs/sampleApps/samplemcs/samplemcsDeploy/src/main/scala/com/tmt/tcs/mcs/samplemcsDeploy/MCSMainApp.scala:13:31: Unused import[0m
+[0m[[0m[33mwarn[0m] [0m[0mimport csw.event.api.scaladsl.EventService[0m
+[0m[[0m[33mwarn[0m] [0m[0m                              ^[0m
+[0m[[0m[33mwarn[0m] [0m[0m/home/tmt_tcs_2/tcs/sampleApps/samplemcs/samplemcsDeploy/src/main/scala/com/tmt/tcs/mcs/samplemcsDeploy/MCSMainApp.scala:14:25: Unused import[0m
+[0m[[0m[33mwarn[0m] [0m[0mimport csw.event.client.EventServiceFactory[0m
+[0m[[0m[33mwarn[0m] [0m[0m                        ^[0m
+[0m[[0m[33mwarn[0m] [0m[0m/home/tmt_tcs_2/tcs/sampleApps/samplemcs/samplemcsDeploy/src/main/scala/com/tmt/tcs/mcs/samplemcsDeploy/MCSMainApp.scala:21:44: Unused import[0m
+[0m[[0m[33mwarn[0m] [0m[0mimport csw.params.commands.CommandResponse.SubmitResponse[0m
+[0m[[0m[33mwarn[0m] [0m[0m                                           ^[0m
+[0m[[0m[33mwarn[0m] [0m[0m/home/tmt_tcs_2/tcs/sampleApps/samplemcs/samplemcsDeploy/src/main/scala/com/tmt/tcs/mcs/samplemcsDeploy/MCSMainApp.scala:23:34: Unused import[0m
+[0m[[0m[33mwarn[0m] [0m[0mimport csw.params.core.generics.{Key, KeyType, Parameter}[0m
+[0m[[0m[33mwarn[0m] [0m[0m                                 ^[0m
+[0m[[0m[33mwarn[0m] [0m[0m/home/tmt_tcs_2/tcs/sampleApps/samplemcs/samplemcsDeploy/src/main/scala/com/tmt/tcs/mcs/samplemcsDeploy/MCSMainApp.scala:23:39: Unused import[0m
+[0m[[0m[33mwarn[0m] [0m[0mimport csw.params.core.generics.{Key, KeyType, Parameter}[0m
+[0m[[0m[33mwarn[0m] [0m[0m                                      ^[0m
+[0m[[0m[33mwarn[0m] [0m[0m/home/tmt_tcs_2/tcs/sampleApps/samplemcs/samplemcsDeploy/src/main/scala/com/tmt/tcs/mcs/samplemcsDeploy/MCSMainApp.scala:23:48: Unused import[0m
+[0m[[0m[33mwarn[0m] [0m[0mimport csw.params.core.generics.{Key, KeyType, Parameter}[0m
+[0m[[0m[33mwarn[0m] [0m[0m                                               ^[0m
+[0m[[0m[33mwarn[0m] [0m[0m/home/tmt_tcs_2/tcs/sampleApps/samplemcs/samplemcsDeploy/src/main/scala/com/tmt/tcs/mcs/samplemcsDeploy/MCSMainApp.scala:24:32: Unused import[0m
+[0m[[0m[33mwarn[0m] [0m[0mimport csw.params.core.models.{Id, Prefix}[0m
+[0m[[0m[33mwarn[0m] [0m[0m                               ^[0m
+[0m[[0m[33mwarn[0m] [0m[0m/home/tmt_tcs_2/tcs/sampleApps/samplemcs/samplemcsDeploy/src/main/scala/com/tmt/tcs/mcs/samplemcsDeploy/MCSMainApp.scala:25:27: Unused import[0m
+[0m[[0m[33mwarn[0m] [0m[0mimport csw.params.events.{Event, SystemEvent}[0m
+[0m[[0m[33mwarn[0m] [0m[0m                          ^[0m
+[0m[[0m[33mwarn[0m] [0m[0m/home/tmt_tcs_2/tcs/sampleApps/samplemcs/samplemcsDeploy/src/main/scala/com/tmt/tcs/mcs/samplemcsDeploy/MCSMainApp.scala:25:34: Unused import[0m
+[0m[[0m[33mwarn[0m] [0m[0mimport csw.params.events.{Event, SystemEvent}[0m
+[0m[[0m[33mwarn[0m] [0m[0m                                 ^[0m
+[0m[[0m[33mwarn[0m] [0m[0m/home/tmt_tcs_2/tcs/sampleApps/samplemcs/samplemcsDeploy/src/main/scala/com/tmt/tcs/mcs/samplemcsDeploy/MCSMainApp.scala:26:52: Unused import[0m
+[0m[[0m[33mwarn[0m] [0m[0mimport scala.concurrent.ExecutionContext.Implicits.global[0m
+[0m[[0m[33mwarn[0m] [0m[0m                                                   ^[0m
+[0m[[0m[33mwarn[0m] [0m[0m/home/tmt_tcs_2/tcs/sampleApps/samplemcs/samplemcsDeploy/src/main/scala/com/tmt/tcs/mcs/samplemcsDeploy/MCSMainApp.scala:28:51: Unused import[0m
+[0m[[0m[33mwarn[0m] [0m[0mimport scala.concurrent.{Await, ExecutionContext, ExecutionContextExecutor, Future}[0m
+[0m[[0m[33mwarn[0m] [0m[0m                                                  ^[0m
+[0m[[0m[33mwarn[0m] [0m[0m/home/tmt_tcs_2/tcs/sampleApps/samplemcs/samplemcsDeploy/src/main/scala/com/tmt/tcs/mcs/samplemcsDeploy/MCSMainApp.scala:28:77: Unused import[0m
+[0m[[0m[33mwarn[0m] [0m[0mimport scala.concurrent.{Await, ExecutionContext, ExecutionContextExecutor, Future}[0m
+[0m[[0m[33mwarn[0m] [0m[0m                                                                            ^[0m
+[0m[[0m[33mwarn[0m] [0m[0m/home/tmt_tcs_2/tcs/sampleApps/samplemcs/samplemcsDeploy/src/main/scala/com/tmt/tcs/mcs/samplemcsDeploy/MCSMainApp.scala:29:20: Unused import[0m
+[0m[[0m[33mwarn[0m] [0m[0mimport scala.util.{Failure, Success}[0m
+[0m[[0m[33mwarn[0m] [0m[0m                   ^[0m
+[0m[[0m[33mwarn[0m] [0m[0m/home/tmt_tcs_2/tcs/sampleApps/samplemcs/samplemcsDeploy/src/main/scala/com/tmt/tcs/mcs/samplemcsDeploy/MCSMainApp.scala:29:29: Unused import[0m
+[0m[[0m[33mwarn[0m] [0m[0mimport scala.util.{Failure, Success}[0m
+[0m[[0m[33mwarn[0m] [0m[0m                            ^[0m
+[0m[[0m[33mwarn[0m] [0m[0m/home/tmt_tcs_2/tcs/sampleApps/samplemcs/samplemcsDeploy/src/main/scala/com/tmt/tcs/mcs/samplemcsDeploy/MCSMainApp.scala:31:51: Unused import[0m
+[0m[[0m[33mwarn[0m] [0m[0mimport scala.concurrent.{Await, ExecutionContext, Future}[0m
+[0m[[0m[33mwarn[0m] [0m[0m                                                  ^[0m
+[0m[[0m[33mwarn[0m] [0m[0m/home/tmt_tcs_2/tcs/sampleApps/samplemcs/samplemcsDeploy/src/main/scala/com/tmt/tcs/mcs/samplemcsDeploy/MCSMainApp.scala:46:15: private val connection in object MCSMainApp is never used[0m
+[0m[[0m[33mwarn[0m] [0m[0m  private val connection = AkkaConnection(ComponentId("SamplemcsAssembly", Assembly))[0m
+[0m[[0m[33mwarn[0m] [0m[0m              ^[0m
+[0m[[0m[33mwarn[0m] [0m[0m/home/tmt_tcs_2/tcs/sampleApps/samplemcs/samplemcsDeploy/src/main/scala/com/tmt/tcs/mcs/samplemcsDeploy/MCSMainApp.scala:50:37: parameter value ec in method sendStartupCommand is never used[0m
+[0m[[0m[33mwarn[0m] [0m[0m  def sendStartupCommand()(implicit ec: ExecutionContext): CommandResponse = {[0m
+[0m[[0m[33mwarn[0m] [0m[0m                                    ^[0m
+[0m[[0m[33mwarn[0m] [0m[0m23 warnings found[0m

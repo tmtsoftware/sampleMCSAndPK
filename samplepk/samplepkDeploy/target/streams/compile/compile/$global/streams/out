@@ -1,0 +1,4 @@
+[0m[[0m[31merror[0m] [0m[0m/home/tmt_tcs_2/tcs/sampleApps/samplepk/samplepkDeploy/src/main/java/com/tmt/tcs/pk/ClientHelper.java:40:1: cannot find symbol[0m
+[0m[[0m[31merror[0m] [0m[0m  symbol:   variable Assembly[0m
+[0m[[0m[31merror[0m] [0m[0m  location: class com.tmt.tcs.pk.ClientHelper[0m
+[0m[[0m[31merror[0m] [0m[0m    private Connection.AkkaConnection assemblyConnection = new Connection.AkkaConnection(new ComponentId("SamplepkAssembly", Assembly));[0m

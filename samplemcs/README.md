@@ -35,24 +35,42 @@ If you are not building csw from the sources, you can get the script as follows:
 
 Note: An alternative method is to run `sbt stage`, which installs the applications locally in ./target/universal/stage/bin.
 
-## Running the HCD and Assembly
+## Performance measurements
 
-Run the container cmd script with arguments. For example:
 
-* Run the HCD in standalone mode with a local config file (The standalone config format is differennt than the container format):
+#### Step 0 Log Files path setup:
+Export below environment variable. This is where events/commands measurement data csv file will be generated after ~ 20mins.
+export LogFiles=<Path of the folder in which log files should be generated>
+e.g.: export LogFiles=/home/tmt_tcs_2/LogFiles/scenario5
+ 
+#### Step 1 - Start CSW services  
+`./csw-services.sh start`  
 
-```
-./target/universal/stage/bin/SampleMCS-container-cmd-app --standalone --local ./src/main/resources/SampleHcdStandalone.conf
-```
+#### JAVA 9  
+As Java 1.8 does not support time capturing in microsecond, before starting any assembly PK or MCS, switch to JRE 9 by modifying PATH variable. This is required only for deployment and build should be done with java 8.  
+`export PATH=/java-9-home-path-here/bin:$PATH`  
 
-* Start the HCD and assembly in a container using the Java implementations:
+#### Step 2 - Start Pointing Kernel Assembly  
+`export PATH=/java-9-home-path-here/bin:$PATH`  
+`cd samplepk/samplepkDeploy/target/universal/stage/bin`  
+`./pk-container-cmd-app --local ../../../../src/main/resources/SamplepkContainer.conf`  
 
-```
-./target/universal/stage/bin/SampleMCS-container-cmd-app --local ./src/main/resources/JSampleContainer.conf
-```
+#### Step 3 - Start MCS Assembly  
+`export PATH=/java-9-home-path-here/bin:$PATH`  
+`cd samplemcs/samplemcsDeploy/target/universal/stage/bin`  
+`./mcs-container-cmd-app --local ../../../../src/main/resources/McsContainer.conf`  
 
-* Or the Scala versions:
+#### Step 4 - Start Jconsole and connect to MCS Container process from it.
+`jconsole`  
 
-```
-./target/universal/stage/bin/SampleMCS-container-cmd-app --local ./src/main/resources/SampleContainer.conf
-```
+#### Step 5 - Start Event subscription in MCS  
+
+`export PATH=/java-9-home-path-here/bin:$PATH`  
+`cd samplemcs/samplemcsDeploy/target/universal/stage/bin`  
+`./mcs-main-app`  
+
+#### Step 6 - Start Event Generation in PK  
+`export PATH=/java-9-home-path-here/bin:$PATH`  
+`cd samplepk/samplepkDeploy/target/universal/stage/bin`  
+`./pk-client`  
+

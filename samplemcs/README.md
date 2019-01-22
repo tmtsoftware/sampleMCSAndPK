@@ -38,7 +38,7 @@ Note: An alternative method is to run `sbt stage`, which installs the applicatio
 ## Performance measurements
 
 
-#### Step 0 Log Files path setup:
+#### Step 0 - Log Files path setup:
 Export below environment variable. This is where events/commands measurement data csv file will be generated after ~ 20mins.
 export LogFiles=<Path of the folder in which log files should be generated>
 e.g.: export LogFiles=/home/tmt_tcs_2/LogFiles/scenario5

@@ -12,8 +12,14 @@ import csw.params.events.EventName;
 import csw.params.events.SystemEvent;
 import csw.params.javadsl.JKeyType;
 
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileReader;
+import java.io.IOException;
 import java.time.Duration;
 import java.time.Instant;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.function.Supplier;
 
 public class EventHandlerActor extends AbstractBehavior<EventHandlerActor.EventMessage> {
@@ -23,13 +29,38 @@ public class EventHandlerActor extends AbstractBehavior<EventHandlerActor.EventM
     private Cancellable cancellable;
     private int counterMcs = 0;
 
-    private static final int LIMIT = 100000;
+    private static final int LIMIT = 100001;
     private Key<Double> azDoubleKey = JKeyType.DoubleKey().make("mcs.az");
     private Key<Double> elDoubleKey = JKeyType.DoubleKey().make("mcs.el");
     private Key<Instant> publishTimeKey = JKeyType.TimestampKey().make("timeStamp");
 
+    private final List<PositionDemand> positionDemandList = new ArrayList<PositionDemand>();
+
     private EventHandlerActor(ActorContext<EventMessage> actorContext, IEventService eventService, JLoggerFactory loggerFactory) {
         this.eventService = eventService;
+        BufferedReader reader=null;
+        try {
+            reader = new BufferedReader(new FileReader(
+                    new File (new File(System.getenv("LogFiles")), "McsPosDemands.txt")));
+            String line = reader.readLine();
+            while (line != null) {
+                System.out.println(line);
+                String[] demand = line.split(",");
+                positionDemandList.add(new PositionDemand(Double.parseDouble(demand[0]), Double.parseDouble(demand[1])));
+                line = reader.readLine();
+            }
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }finally {
+           if(reader!=null) {
+               try {
+                   reader.close();
+               } catch (IOException e) {
+                   e.printStackTrace();
+               }
+           }
+        }
 
     }
 
@@ -57,13 +88,32 @@ public class EventHandlerActor extends AbstractBehavior<EventHandlerActor.EventM
         }
     };
 
+    private Supplier<Event> fileBasedDemandGenerator = new Supplier<Event>() {
+
+
+        @Override
+        public Event get() {
+            counterMcs++;
+
+            if (counterMcs < LIMIT) {
+                //System.out.println("publishing event...");
+                return new SystemEvent(prefix, new EventName("mcsdemandpositions"))
+                        .add(azDoubleKey.set(positionDemandList.get(counterMcs).getAz()))
+                        .add(elDoubleKey.set(positionDemandList.get(counterMcs).getEl()))
+                        .add(publishTimeKey.set(Instant.now()));
+            }
+            cancellable.cancel();
+            return null;
+        }
+    };
+
     @Override
     public Receive<EventMessage> createReceive() {
 
         ReceiveBuilder<EventMessage> builder = receiveBuilder()
                 .onMessage(McsDemandMessage.class,
                         message -> {
-                            cancellable = eventService.defaultPublisher().publish(demandGenerator, Duration.ofMillis(10));
+                            cancellable = eventService.defaultPublisher().publish(fileBasedDemandGenerator, Duration.ofMillis(10));
                             return Behaviors.same();
                         });
 
